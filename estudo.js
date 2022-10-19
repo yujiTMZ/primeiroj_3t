@@ -39,6 +39,20 @@ function quadrado (){
  function total(){
          let val = document.getElementById("valor").nodeValue;
          let ju = document.getElementById("juros").nodeValue;
+
+        if(!Number(val)){
+            alert("O valor deve ser um número.");
+            document.getElementById("valor").value = "";
+            document.getElementById("valor").focus();
+            return   
+
+        }
+        if(!Number(ju)){
+                alert("O valor deve ser um número.") 
+                document.getElementById("juros").value = "";
+                document.getElementById("juros").focus();
+                return   
+        }
          let resultado = (val * (1+ (ju/100)));
          document.write("o resultado é" + resultado);
  }
@@ -71,7 +85,6 @@ function divisão(){
         let r =(Number (v1) / Number (v2));
         document.getElementById("resultado").innerHTML = r;
 }
-
 function multiplicação(){ 
         let v1 = document.getElementById("v1").value;
         let v2 = document.getElementById("v2").value;
