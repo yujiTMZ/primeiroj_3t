@@ -31,11 +31,20 @@ function quadrado(){
    for(var i = 2; i < 21; i++){
       document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
    }
+   
+
+function moeda (atual){
+   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+   
+}
+
 }
 
 function total(){
    let val = document.getElementById("valor").value;
    let ju = document.getElementById("juros").value;
+
+   let t = document.getElementById("meses").value;
    
    if(!Number(val)){
       alert("O valor deve ser um número.");
@@ -50,6 +59,20 @@ function total(){
       return 
    }
 
-   let resultado = (val * (1+ (ju/100)));
-   document.write("O resultado é " + resultado);
+   if(!Number(t)){
+      alert("A quantidade de meses deve ser um número.");
+      document.getElementById("meses").value = "";
+      document.getElementById("meses").focus();
+      return 
+   }
+   let r = val;
+   for(let m = 1; m <= t; m++){
+       r = (val * (1+ (ju/100)));
+       val = r;
+       document.write("Mẽs " + m + " valor:" + moeda (r) + "<br>");
+   }
+
+   
+   document.write("O tatal é " + moeda(r));
 }
+
