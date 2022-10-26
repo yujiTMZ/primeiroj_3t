@@ -1,5 +1,8 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +11,20 @@
     <link rel="stylesheet" href="geral.css">
     <script src="estudo.js"></script>
 </head>
+
 <body>
-Capital: <input id="valor" type="text"> <br>
-Juros (mensais): <input id="juros" type="text"> <br>
+    <div class="calculadora">
+        <span id="total">Total: 0,00</span> <br>
+        Capital: <input id="valor" type="text"> <br>
+        Juros (mensais): <input id="juros" type="text"> <br>
+        Nr. Meses: <input id="meses" type="text"> <br>
+        <button id="btnCalc" onclick="total()"> Calcular </button>
+    </div>
+    <div>
+        <span id="listaMes">Meses</span>
+    </div>
 
-Nr.Meses: <input id="meses" type="text"> <br>
-
-<button onclick="total()">Ok</button>
-
-
-<br><br><br><br>
-<span id="resultado"></span><br>
-Valor 1: <input id="v1" type="text"><br>
-Valor 2: <input id="v2" type="text"><br>
-<button onclick="soma()"> + </button>
-<button onclick="sub()"> - </button>
-<button onclick="divisão()"> / </button>
-<button onclick="multplicação()"> * </button>
-
-
+    <br><br><br>
 </body>
-</html>
 
+</html>
