@@ -63,12 +63,14 @@ function total(){
       return 
    }
    let r = val;
+   let texto = "";
    for(let m = 1; m <= t; m++){
       r = (val * (1+ (ju/100)));
       val = r;
+      texto +=  m + ": " + moeda(r) + "<br>"
       //document.write("Mês " + m + " valor: " + moeda(r) + "<br>");
    }
-   
+      document.getElementById("ListaMes").innerHTML = texto;
       document.getElementById("total").innerHTML = "Total: "+ moeda (r);
    //document.write("O tatal é " + moeda(r));
 }
