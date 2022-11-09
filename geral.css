@@ -6,6 +6,21 @@
     box-shadow: 10px 10px rgb(241, 141, 241);
     text-align: center;
 }
+.calcF{
+    display: none;
+}
+#calcFin{
+    display: none;
+}
+#calcFin:checked + .calculadora .calcF{
+    display: block;
+}
+#bntCalc {
+    background: rgb(119, 243, 3);
+    color: rgb(10, 10, 10);
+    padding: 10px;
+    margin: 5px;
+}
 .calculadora input{
 border-radius: 10px;
 border: none;
@@ -44,4 +59,3 @@ color: cornflowerblue;
     cursor: pointer;
 
 }
-
